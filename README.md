@@ -140,7 +140,7 @@ Bu proje MIT lisansı altında lisanslanmıştır.
 
 ## 👨‍💻 Geliştirici
 
-**Ibrahim MCX**
+- Vercel: [Quiz Uygulaması](https://bilgisayarl-goru-quiz.vercel.app/)
 - GitHub: [@ibrahimmcx](https://github.com/ibrahimmcx)
 - Repository: [bilgisayarl-_goru_quiz](https://github.com/ibrahimmcx/bilgisayarl-_goru_quiz)
 
