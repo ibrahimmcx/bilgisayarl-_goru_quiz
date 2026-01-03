@@ -1,0 +1,404 @@
+🟢 TEMEL SORULAR (Görüntü Açma & Temel İşlemler)
+
+Image.open() fonksiyonu ne işe yarar?
+
+PIL kütüphanesinde bir görüntü nesnesi hangi veri yapısında tutulur?
+
+im.show() metodu ne amaçla kullanılır?
+
+Bir görüntüyü gri tonlamaya çevirmek neden gerekebilir?
+
+convert("L") ifadesindeki "L" neyi temsil eder?
+
+Bir görüntüyü döndürme (rotate) işlemi ne işe yarar?
+
+rotate(360) ile rotate(0) işlemleri arasında görsel olarak fark var mıdır?
+
+Görüntü boyutlandırma (resize) işlemi hangi durumlarda kullanılır?
+
+resize((128,128)) ifadesi ne anlama gelir?
+
+Görüntü işlemede en-boy oranının bozulması ne gibi sorunlara yol açar?
+
+🟡 ORTA SEVİYE SORULAR (Crop, Paste, Transform)
+
+crop((x1, y1, x2, y2)) fonksiyonu ne yapar?
+
+Crop işleminde kullanılan koordinatlar neyi temsil eder?
+
+Bir görüntünün sadece belirli bir bölgesini almak neden faydalıdır?
+
+transpose(Image.Transpose.ROTATE_180) işlemi ne yapar?
+
+Görüntü döndürme işlemi rotate ile transpose arasında nasıl farklılık gösterir?
+
+Bir görüntü parçasını başka bir görüntüye yapıştırmak (paste) ne işe yarar?
+
+paste(region, box) işleminde box değişkeninin görevi nedir?
+
+Aynı görüntü üzerine tekrar yapıştırma işlemi görselde nasıl bir etki oluşturur?
+
+Görüntü bölme ve birleştirme işlemleri hangi uygulamalarda kullanılır?
+
+Bu işlemler bilgisayarlı görünün hangi alt alanlarında yaygındır?
+
+🔵 İLERİ SEVİYE SORULAR (Format & Renk Modları)
+
+Bir görüntünün dosya formatı neden değiştirilmek istenir?
+
+PNG ve JPEG formatları arasındaki temel farklar nelerdir?
+
+Path.with_suffix() fonksiyonu ne işe yarar?
+
+Bir görüntünün mode özelliği neyi ifade eder?
+
+RGB, RGBA ve L modları arasındaki farklar nelerdir?
+
+Şeffaf arka plan (alpha channel) ne anlama gelir?
+
+JPEG formatı neden şeffaflığı desteklemez?
+
+Image.new("RGB", im.size, (255,255,255)) satırı ne amaçla kullanılır?
+
+Alpha kanalı olan bir görüntü JPEG’e dönüştürülürken neden arka plan eklenir?
+
+getchannel("A") fonksiyonu neyi döndürür?
+
+🔴 UYGULAMA & YORUM SORULARI
+
+Bir görüntüyü JPEG formatına dönüştürmeden önce hangi kontroller yapılmalıdır?
+
+optimize=True parametresi görüntü kaydetme sürecini nasıl etkiler?
+
+Görüntü kalitesi (quality) ile dosya boyutu arasındaki ilişki nasıldır?
+
+Aynı görüntüyü farklı formatlarda kaydetmenin avantajları nelerdir?
+
+Bu kodlar bir web uygulamasında hangi özellikler için kullanılabilir?
+
+Kullanıcıdan gelen bir görüntüyü güvenli şekilde işlemek için hangi ek adımlar gerekir?
+
+Bu işlemler bir backend servisinde mi yoksa frontend’de mi yapılmalıdır? Neden?
+
+Görüntü işleme süresi performansı hangi faktörlere bağlıdır?
+
+Büyük boyutlu görüntülerle çalışırken hangi problemler ortaya çıkabilir?
+
+Bu kodlar kullanılarak bir “online image editor” nasıl geliştirilebilir?
+
+⭐ BONUS – WEB İÇİN ÇOK UYGUN SORULAR
+
+Bu kodda kullanılan her bir görüntü işlemi kullanıcıya hangi butonla sunulabilir?
+
+Kullanıcıdan alınan koordinatlarla dinamik crop işlemi nasıl yapılabilir?
+
+Görüntü format dönüştürme işlemi API olarak nasıl tasarlanmalıdır?
+
+Aynı anda birden fazla görüntü işlemek için hangi yapı kullanılmalıdır?
+
+Bu kodlar frontend–backend etkileşiminde nasıl bir role sahiptir?
+
+
+
+---------------------------------------------------
+
+
+🟢 TEMEL SORULAR (Görüntü Okuma & Gösterme)
+
+Image.open() fonksiyonu ne işe yarar?
+
+Bir görüntüyü NumPy dizisine dönüştürmenin amacı nedir?
+
+array(Image.open(...)) ifadesi ne tür bir veri yapısı üretir?
+
+imshow(im) fonksiyonu ne işe yarar?
+
+Bir görüntüyü çizdirmeden önce neden dizi (array) formatına dönüştürürüz?
+
+title() fonksiyonu görselleştirmede hangi amaçla kullanılır?
+
+show() fonksiyonu ne zaman çağrılmalıdır?
+
+Görüntü üzerinde noktalar çizmek hangi uygulamalarda kullanılır?
+
+🟡 ORTA SEVİYE SORULAR (Plot, Nokta ve Çizgi Çizimi)
+
+x ve y dizileri görüntü üzerinde neyi temsil eder?
+
+plot(x, y) komutu varsayılan olarak nasıl bir çizim yapar?
+
+plot(x, y, 'ks:') ifadesindeki k, s ve : ne anlama gelir?
+
+Görüntü üzerine işaretleyici (marker) eklemek neden faydalıdır?
+
+Noktaları birleştiren çizgiler hangi durumlarda kullanılır?
+
+Görselleştirme sırasında farklı çizgi stilleri kullanmanın avantajı nedir?
+
+🔵 İLERİ SEVİYE SORULAR (Kontur & Histogram)
+
+Kontur (contour) çizimi nedir?
+
+Kontur çıkarımı için neden gri tonlamalı görüntü kullanılır?
+
+convert('L') işlemi ne işe yarar?
+
+contour(im, origin='image') fonksiyonu ne yapar?
+
+axis('equal') komutunun amacı nedir?
+
+Histogram nedir ve görüntü hakkında hangi bilgileri verir?
+
+Histogram çizimi için neden görüntü düzleştirilir (flatten)?
+
+hist(im.flatten(), 128) ifadesindeki 128 değeri neyi temsil eder?
+
+Histogramdan görüntünün kontrastı hakkında nasıl yorum yapılır?
+
+🔴 NUMPY & GÖRÜNTÜ TEMSİLİ SORULARI
+
+NumPy dizi nesnesi nedir?
+
+NumPy dizileri neden görüntü işlemede sık kullanılır?
+
+im.shape çıktısı neyi ifade eder?
+
+Renkli ve gri tonlamalı görüntülerin shape değerleri nasıl farklıdır?
+
+im.dtype görüntü hakkında hangi bilgiyi verir?
+
+im[300, 220] ifadesi neyi temsil eder?
+
+Bir piksel değerinin tek başına alınması hangi durumlarda gereklidir?
+
+🟣 GRİ TONLAMA DÖNÜŞÜMLERİ SORULARI
+
+im2 = 255 - im işlemi görüntü üzerinde ne yapar?
+
+Görüntü tersleme (invert) hangi durumlarda kullanılır?
+
+im3 = (100.0/255)*im + 100 işlemi görüntü üzerinde nasıl bir etki oluşturur?
+
+Gri seviye aralığını daraltmak görüntüyü nasıl etkiler?
+
+im4 = 255.0*(im/255.0)**2 işlemi ne tür bir dönüşümdür?
+
+Kare alma (square) dönüşümü görüntü kontrastını nasıl etkiler?
+
+Farklı gri tonlama dönüşümlerinin histogramları neden farklıdır?
+
+im.min() ve im.max() değerleri neyi ifade eder?
+
+⭐ DÖNÜŞÜM & TİP DÖNÜŞTÜRME SORULARI
+
+NumPy dizisini tekrar PIL Image nesnesine dönüştürmenin amacı nedir?
+
+Image.fromarray() fonksiyonu ne işe yarar?
+
+Float türündeki bir görüntü neden doğrudan kaydedilemez?
+
+uint8 dönüşümü neden gereklidir?
+
+Görüntü tip dönüşümü yapılmazsa ne tür hatalar oluşabilir?
+
+NumPy–PIL dönüşümleri hangi tür projelerde sık kullanılır?
+
+----------------------------------------------------------
+
+🟢 TEMEL SORULAR (Görüntü Boyutlandırma)
+
+Görüntü boyutlandırma (image resizing) neden görüntü işlemede sık kullanılır?
+
+NumPy dizilerinin boyutunu doğrudan değiştirmek neden zordur?
+
+Görüntü boyutlandırmada neden PIL Image nesnesi kullanılır?
+
+Image.fromarray() fonksiyonu ne işe yarar?
+
+uint8 türüne dönüştürme neden gereklidir?
+
+resize(sz) fonksiyonu görüntü üzerinde ne yapar?
+
+Boyutlandırma işlemi görüntü kalitesini nasıl etkiler?
+
+🟡 ORTA SEVİYE SORULAR (Histogram Eşitleme – Temel)
+
+Histogram eşitleme (histogram equalization) nedir?
+
+Histogram eşitlemenin temel amacı nedir?
+
+Histogram eşitleme neden genellikle gri tonlamalı görüntülerde uygulanır?
+
+Görüntü kontrastı ne anlama gelir?
+
+Histogram eşitleme kontrastı nasıl artırır?
+
+nbr_bins parametresi neyi temsil eder?
+
+8-bit bir görüntü için neden genellikle 256 bin kullanılır?
+
+🔵 İLERİ SEVİYE SORULAR (Histogram, CDF ve Interpolasyon)
+
+im.flatten() işlemi ne yapar?
+
+Histogram fonksiyonu neden tek boyutlu veri bekler?
+
+np.histogram() fonksiyonunun çıktıları nelerdir?
+
+Histogramda density=True parametresi ne anlama gelir?
+
+Kümülatif dağılım fonksiyonu (CDF) nedir?
+
+CDF görüntü eşitlemede neden kullanılır?
+
+cumsum() fonksiyonu ne yapar?
+
+CDF’nin [0, 255] aralığına ölçeklenmesinin sebebi nedir?
+
+cdf[-1] ifadesi neyi temsil eder?
+
+Doğrusal enterpolasyon (interpolation) ne anlama gelir?
+
+np.interp() fonksiyonu histogram eşitlemede nasıl bir rol oynar?
+
+Piksel değerlerinin CDF ile eşlenmesi görüntüyü nasıl değiştirir?
+
+🔴 UYGULAMA & ANALİZ SORULARI
+
+Histogram eşitleme her görüntü için uygun mudur?
+
+Histogram eşitlemenin olumsuz etkileri nelerdir?
+
+Çok karanlık veya çok parlak görüntülerde histogram eşitleme nasıl sonuç verir?
+
+Eşitlenmiş görüntünün histogramı nasıl bir dağılım gösterir?
+
+Histogram eşitleme ile normalizasyon arasındaki fark nedir?
+
+np.clip() fonksiyonu neden kullanılır?
+
+round() işlemi neden gereklidir?
+
+Görüntüyü tekrar uint8 tipine çevirmezsek ne olur?
+
+🟣 GÖRSELLEŞTİRME SORULARI
+
+Orijinal görüntünün histogramı hangi bilgileri verir?
+
+Eşitlenmiş görüntünün histogramı nasıl yorumlanır?
+
+Histogram grafiklerinde x ve y eksenleri neyi temsil eder?
+
+CDF grafiği görüntü hakkında nasıl bir bilgi sunar?
+
+Görüntü ve histogramın birlikte gösterilmesi neden faydalıdır?
+
+⭐ ORTALAMA GÖRÜNTÜ (IMAGE AVERAGING) SORULARI
+
+Ortalama görüntü (average image) nedir?
+
+Birden fazla görüntünün ortalamasını almak ne amaçla yapılır?
+
+Ortalama görüntü gürültüyü (noise) nasıl etkiler?
+
+Görüntülerin aynı boyutta olması neden gereklidir?
+
+Döngü içinde görüntülerin toplanması hangi matematiksel işlemi temsil eder?
+
+Hatalı veya eksik görüntülerin atlanması neden önemlidir?
+
+Ortalama görüntü hangi bilgisayarlı görü uygulamalarında kullanılır?
+
+---------------------------------------------------
+
+🧠 Convolutional Neural Network (CNN) – Soru Seti
+📌 Kavramsal Sorular
+
+Convolutional Neural Network (CNN) hangi problem türlerinde özellikle etkilidir?
+
+CNN’lerin biyolojik ilham kaynağı nedir?
+
+İnsan beyninin bir uçağı tanıma süreci CNN’lerde hangi yaklaşımla modellenir?
+
+CNN’lerin klasik yapay sinir ağlarından temel farkı nedir?
+
+📌 Katman Bilgisi Soruları
+
+Convolutional Layer’ın temel görevi nedir?
+
+Non-Linearity (Activation) katmanı CNN’de neden gereklidir?
+
+Pooling katmanının ağ üzerindeki temel etkisi nedir?
+
+Flattening katmanı neden kullanılır?
+
+Fully-Connected Layer CNN mimarisinde hangi amaçla kullanılır?
+
+📌 Convolution İşlemi Soruları
+
+5×5 boyutunda bir giriş matrisi ve 3×3 boyutunda bir filtre kullanıldığında, stride=1 ve padding yoksa çıktı boyutu neden 3×3 olur?
+
+Feature Map kavramı neyi ifade eder?
+
+Birden fazla filtre kullanmanın CNN’e sağladığı avantaj nedir?
+
+Filtrelerin görüntü üzerinde kaydırılmasına verilen isim nedir?
+
+📌 Stride & Padding Soruları
+
+Stride değeri artırıldığında Feature Map boyutu nasıl etkilenir?
+
+Padding neden kullanılır?
+
+Padding uygulanmadığında giriş ve çıkış boyutları arasındaki ilişki nasıldır?
+
+📌 Aktivasyon (Non-Linearity) Soruları
+
+Tüm katmanlar doğrusal olursa sinir ağı neden etkisiz olur?
+
+ReLU fonksiyonunun matematiksel tanımı nedir?
+
+ReLU fonksiyonu Feature Map üzerinde ne tür bir etki oluşturur?
+
+Sigmoid ve Tanh fonksiyonlarının günümüzde daha az tercih edilme sebebi nedir?
+
+📌 Pooling Katmanı Soruları
+
+Max Pooling işlemi nasıl çalışır?
+
+Pooling katmanının aşırı öğrenme (overfitting) üzerindeki etkisi nedir?
+
+Average Pooling ile Max Pooling arasındaki temel fark nedir?
+
+Bazı modern mimarilerde pooling katmanının tamamen kaldırılmasının sebebi ne olabilir?
+
+📌 Mimari ve Akış Soruları
+
+CNN mimarisinde katmanların genel sıralaması nasıl olmalıdır?
+
+Aşağıdaki yapı neyi ifade eder?
+Giriş → [[Conv → ReLU]*N → Pool]*M → Flatten → [FC → ReLU]*K → FC
+
+CNN’de neden son katman genellikle Fully-Connected katmandır?
+
+📌 Tarihsel & Mimari Sorular
+
+LeNet hangi amaçla geliştirilmiştir?
+
+AlexNet’in CNN tarihinde dönüm noktası olmasının sebebi nedir?
+
+GoogLeNet mimarisinin temel hedefi nedir?
+
+VGGNet hangi özelliğin CNN performansı üzerindeki etkisini kanıtlamıştır?
+
+VGGNet kaç adet Convolutional katmandan oluşur?
+
+📌 Yorum & Analiz Soruları
+
+CNN’lerde düşük seviyeli özellikler ile yüksek seviyeli özellikler arasındaki fark nedir?
+
+Bir CNN modelinde çok fazla parametre bulunması hangi probleme yol açabilir?
+
+Stride artırmak mı yoksa pooling kullanmak mı daha avantajlıdır? Neden?
+
+CNN’lerin yüz tanıma sistemlerinde kullanılmasının sebebi nedir?

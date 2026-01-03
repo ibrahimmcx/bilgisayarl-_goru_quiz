@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görüntü İşleme ve CNN Quiz</title>
+    <meta name="description" content="Görüntü işleme, PIL, NumPy ve Convolutional Neural Networks konularında interaktif çoktan seçmeli quiz">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="quiz-header">
+            <h1>🧠 Görüntü İşleme & CNN Quiz</h1>
+            <p class="subtitle">Bilgini test et! PIL, NumPy, Matplotlib ve CNN konularında çoktan seçmeli sorular</p>
+        </header>
+
+        <!-- Quiz Container -->
+        <div class="quiz-container" id="quizContainer">
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <label for="categorySelect">📂 Kategori Seçin:</label>
+                <select id="categorySelect">
+                    <option value="all">Tüm Kategoriler</option>
+                </select>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span id="questionNumber">Soru 1</span>
+                    <span id="scoreDisplay">Skor: 0/0</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="question-card">
+                <div class="question-category" id="questionCategory">Kategori</div>
+                <h2 class="question-text" id="questionText">Soru yükleniyor...</h2>
+                
+                <!-- Options -->
+                <div class="options-container" id="optionsContainer">
+                    <button class="option-btn" data-index="0">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">Seçenek A</span>
+                    </button>
+                    <button class="option-btn" data-index="1">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">Seçenek B</span>
+                    </button>
+                    <button class="option-btn" data-index="2">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">Seçenek C</span>
+                    </button>
+                    <button class="option-btn" data-index="3">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">Seçenek D</span>
+                    </button>
+                </div>
+
+                <!-- Feedback -->
+                <div class="feedback" id="feedback"></div>
+
+                <!-- Navigation -->
+                <div class="navigation">
+                    <button class="btn btn-next" id="nextBtn" disabled>
+                        Sonraki Soru →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="results-container hidden" id="resultsContainer">
+            <div class="results-card">
+                <h2>🎉 Quiz Tamamlandı!</h2>
+                <div class="results-score">
+                    <div class="score-circle">
+                        <span class="score-percentage" id="scorePercentage">0%</span>
+                    </div>
+                    <p class="score-text">
+                        <span id="finalScore">0</span> / <span id="totalQuestions">0</span> doğru cevap
+                    </p>
+                </div>
+                <div class="results-message" id="resultsMessage">
+                    Harika bir performans!
+                </div>
+                <button class="btn btn-restart" id="restartBtn">
+                    🔄 Yeniden Başla
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="quiz-data.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
